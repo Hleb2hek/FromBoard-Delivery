@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FromBoard Delivery</title>
+
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="./styles/css/main.css">
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="/icon/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/icon/favicon/favicon.svg" />
+	<link rel="shortcut icon" href="/icon/favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/icon/favicon/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+	<link rel="manifest" href="/icon/favicon/site.webmanifest" />
+</head>
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<div class="header__about">
+				<div class="header__logo">
+					<a class="header__logo-link" href="#!">
+						<img class="header__logo-img" src="./icon/logo.svg" alt="Logo FromBoard Delivery" width="50" height="74" loading="lazy">
+						<div class="header__logo-name">FromBoard Delivery</div>
+					</a>
+					
+				</div>
+				<div class="header__description">
+					<div class="header__price">
+						<p>
+						Доставляем товары из заграницы в Россию <br>
+						Стоимость от 550 рублей за заказ <br>
+						1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽
+						</p>
+					</div>
+					<div class="header__contact">
+						<a class="header__contact-link" href="tel:+78001234567">+7 (800) 123 45-67</a> <br>
+						<div class="header__contact-description">Звонки по России бесплатны</div>
+					</div>
+					<div class="header__burger">
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<nav class="header__navigation">
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="#!" class="header__link">Калькулятор</a>
+					</li>
+					<li class="header__item">
+						<a href="#!" class="header__link">О нас</a>
+					</li>
+					<li class="header__item">
+						<a href="#!" class="header__link">Гарантии</a>
+					</li>
+					<li class="header__item">
+						<a href="#!" class="header__link">Отзывы</a>
+					</li>
+				</ul>
+				<button class="header__btn btn" type="button">Оставить заявку</button>
+			</nav>
+			<div class="header__price-down">
+				<div>Доставляем товары из заграницы в Россию</div>
+				<div>Стоимость от 550 рублей за заказ</div>
+				<div>1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</div>
+			</div>
+		</div>
+	</header>
+
+	<script>
+		document.querySelector('.header__burger').addEventListener('click', function() {
+			this.classList.toggle('active');
+			document.querySelector('.header__price-down').classList.toggle('active');
+			document.querySelector('.header__navigation').classList.toggle('active');
+			document.querySelector('.header__container').classList.toggle('active');
+		});
+	</script>
+</body>
+</html>
