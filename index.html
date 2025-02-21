@@ -39,9 +39,13 @@
 						<a class="header__contact-link" href="tel:+78001234567">+7 (800) 123 45-67</a> <br>
 						<div class="header__contact-description">Звонки по России бесплатны</div>
 					</div>
-					<div class="header__burger">
-						<span></span>
+					<div class="burger">
+						<input id="burger__checkbox" class="burger__checkbox" type="checkbox">
+						<label class="burger__btn" for="burger__checkbox"></label>
 					</div>
+					<!-- <div class="header__burger">
+						<span></span>
+					</div> -->
 				</div>
 			</div>
 			<nav class="header__navigation">
@@ -70,8 +74,9 @@
 	</header>
 
 	<script>
-		document.querySelector('.header__burger').addEventListener('click', function() {
+		document.querySelector('.burger__btn').addEventListener('click', function() {
 			this.classList.toggle('active');
+			document.querySelector('.header').classList.toggle('active');
 			document.querySelector('.header__price-down').classList.toggle('active');
 			document.querySelector('.header__navigation').classList.toggle('active');
 			document.querySelector('.header__container').classList.toggle('active');

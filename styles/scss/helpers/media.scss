@@ -29,19 +29,16 @@
 }
 
 @media (max-width: 880px) {
+
+	// класс .active выступает в роли visually-hidden, но только
+	// при нажатии на бургер он возвращает блоки со своим классом
 	.container {
 		--container-padding-x: 62px;
 	}
 	.header {
-		
 		&__container {
 			border-bottom-left-radius: 16px;
 			border-bottom-right-radius: 16px;
-			&.active {
-				position: fixed;
-				background-color: var(--color-gray-50);
-				transition: transform .5s;
-			}
 		}
 		&__logo-name {
 			font-size: 18px;
@@ -72,13 +69,13 @@
 				display: flex;
 			}
 		}
-		&__burger {
-			display: flex;
+		& .burger {
+			display: block;
 		}
 	}
 }
 
-@media (max-width: 580px) {
+@media (max-width: 605px) {
 	.header {
 		&__about {
 			flex-direction: column;
@@ -88,10 +85,8 @@
 			row-gap: 12px;
 		}
 		&__navigation {
-			display: none;
 			row-gap: 12px;
 			&.active {
-				display: flex;
 				flex-direction: column;
 			}
 		}
@@ -99,9 +94,7 @@
 			justify-content: center;
 		}
 		&__price-down {
-			display: none;
 			&.active {
-				display: flex;
 				flex-direction: column;
 				row-gap: 12px;
 			}
