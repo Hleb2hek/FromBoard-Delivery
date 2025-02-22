@@ -1,0 +1,71 @@
+@use "../base/index.scss" as *;
+
+.calculator {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	margin-top: 72px;
+	margin-bottom: 72px;
+	column-gap: var(--indent);
+	height: calc(100vh - 192px);
+
+	// calculator__body и его вытекающие
+	&__body {
+		max-height: 584px;
+	}
+	&__title {
+		text-align: left;
+		font-size: 36px;
+		line-height: 1.1;
+		font-weight: 900;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+	&__description {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+	&__img {
+		border-radius: var(--border-radius);;
+	}
+
+	// calculator__inner и его вытекающие
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(6,1fr);
+		max-height: 584px;
+		padding: var(--indent) 0;
+		background-color: var(--color-gray-50);
+		border-radius: var(--border-radius);
+
+		&__about {
+			grid-column: 2/4 span;
+
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 1.2;
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+		&-description {
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		&-form {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			grid-column: 2/4 span;
+			gap:var(--indent);
+
+			
+		}
+	}
+}
