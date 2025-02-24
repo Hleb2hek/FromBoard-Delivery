@@ -47,9 +47,6 @@
 			font-weight: 900;
 			font-size: 36px;
 			line-height: 1.1;
-			&:hover {
-				color: var(--color-purple-500) ;
-			}
 		}
 		&-description {
 			font-size: 24px;
@@ -72,12 +69,6 @@
 	&__link {
 		text-decoration: none;
 		font-weight: 700;
-		&:hover {
-			color: var(--color-purple-500) ;
-		}
-		&:active {
-			color: var(--color-purple-700) ;
-		}
 	}
 	&__price-down {
 		display: none;

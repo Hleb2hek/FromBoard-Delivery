@@ -12,7 +12,7 @@
 
 	// Размеры контейнера
 	--container-width: 1536px;
-	--container-padding-x: 96px;
+	--container-padding-x: 60px;
 
 	// Повторяющиеся отступы
 	--indent: 24px;
@@ -47,11 +47,7 @@ body {
 	padding-inline: var(--container-padding-x);
 }
 
-a {
-	color: var(--color-gray-900);
-}
-
-a,button,input,textarea,svg *,span {
+a,button,input,textarea,svg *,span,img {
 	transition: var(--transition-duration);
 }
 

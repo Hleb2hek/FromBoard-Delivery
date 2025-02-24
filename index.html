@@ -15,6 +15,9 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/icon/favicon/apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content="MyWebSite" />
 	<link rel="manifest" href="/icon/favicon/site.webmanifest" />
+
+	<!-- Библиотека fancybox для реализации просмотра Свидетельств о регистрации -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 </head>
 <body>
 	<header class="header">
@@ -77,59 +80,221 @@
 		<section class="calculator">
 			<h2 class="visually-hidden">calculator</h2>
 			<div class="calculator__body">
-				<h3 class="calculator__title">
-					Без проблемная доставка купленных вещей из США, Европы и Азии в Россию
-				</h3>
-				<div class="calculator__description">
-					<p>Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
-				</div>
-				<img class="calculator__img" src="./img/calculator/1.jpg" alt="The man with the box" width="756" height="232" loading="lazy">
+				<div class="calculator__wrapper">
+						<h3 class="calculator__title">
+							Без проблемная доставка купленных вещей из США, Европы и Азии в Россию
+						</h3>
+						<div class="calculator__description">
+								<p>Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно 	заказывать товары со всего мира и получать их в России</p>
+						</div>
+					</div>
+				<img class="calculator__img" src="./img/calculator/1.jpg" alt="The man with the box" width="756px" height="232px" loading="lazy">
 			</div>
 			<div class="calculator__inner">
-				<div class="calculator__inner-about">
-					<h3 class="calculator__inner-title">
-						Калькулятор доставки
-					</h3>
-					<div class="calculator__inner-description">
-						Посчитайте, сколько будет стоить перевозка покупки из зарубежа
+				<div class="calculator__inner-wrapper">
+					<div class="calculator__inner-about">
+						<h3 class="calculator__inner-title">
+							Калькулятор доставки
+						</h3>
+						<div class="calculator__inner-description">
+							Посчитайте, сколько будет стоить перевозка покупки из зарубежа
+						</div>
 					</div>
+					<form class="calculator__inner-form">
+						<label class="visually-hidden" for="username">Имя</label>
+						<input class="calculator__inner-input input" id="username" placeholder="Имя" type="text">
+						
+						<label class="visually-hidden" for="email">Почта</label>
+						<input class="calculator__inner-input input" id="email" placeholder="Почта" type="email">
+	
+						<label class="visually-hidden" for="number">Телефон</label>
+						<input class="calculator__inner-input input" id="number" placeholder="Телефон" type="text">
+	
+						<label class="visually-hidden" for="totalArea">Общая площадь</label>
+						<input class="calculator__inner-input input" id="totalArea" placeholder="Общая площадь, м²" type="number">
+	
+						<label class="visually-hidden" for="weight">Вес</label>
+						<input class="calculator__inner-input input" id="weight" placeholder="Вес, кг" type="number">
+	
+						<label class="visually-hidden" for="countryOfPurchase">Страна покупки</label>
+						<input class="calculator__inner-input input" id="countryOfPurchase" placeholder="Страна покупки" type="text">
+	
+						<label class="visually-hidden" for="cityOfPurchase">Город покупки</label>
+						<input class="calculator__inner-input input" id="cityOfPurchase" placeholder="Город покупки" type="text">
+	
+						<label class="visually-hidden" for="deliveryRegion">Область доставки</label>
+						<input class="calculator__inner-input input" id="dliveryRegion" placeholder="Область доставки" type="text">
+	
+						<label class="visually-hidden" for="deliveryCity">Город доставки</label>
+						<input class="calculator__inner-input input" id="deliveryCity" placeholder="Город доставки" type="text">
+						
+						<button class="calculator__inner-btn btn" type="submit">Заказать расчёт</button>
+					</form>
 				</div>
-				<form class="calculator__inner-form">
-					<label class="visually-hidden" for="username">Имя</label>
-					<input class="calculator__inner-input input" id="username" placeholder="Имя" type="text">
-					
-					<label class="visually-hidden" for="email">Почта</label>
-					<input class="calculator__inner-input input" id="email" placeholder="Почта" type="email">
-
-					<label class="visually-hidden" for="number">Телефон</label>
-					<input class="calculator__inner-input input" id="number" placeholder="Телефон" type="text">
-
-					<label class="visually-hidden" for="totalArea">Общая площадь</label>
-					<input class="calculator__inner-input input" id="totalArea" placeholder="Общая площадь, м²" type="number">
-
-					<label class="visually-hidden" for="weight">Вес</label>
-					<input class="calculator__inner-input input" id="weight" placeholder="Вес, кг" type="number">
-
-					<label class="visually-hidden" for="countryOfPurchase">Страна покупки</label>
-					<input class="calculator__inner-input input" id="countryOfPurchase" placeholder="Страна покупки" type="text">
-
-					<label class="visually-hidden" for="cityOfPurchase">Город покупки</label>
-					<input class="calculator__inner-input input" id="cityOfPurchase" placeholder="Город покупки" type="text">
-
-					<label class="visually-hidden" for="deliveryRegion">Область доставки</label>
-					<input class="calculator__inner-input input" id="dliveryRegion" placeholder="Область доставки" type="text">
-
-					<label class="visually-hidden" for="deliveryCity">Город доставки</label>
-					<input class="calculator__inner-input input" id="deliveryCity" placeholder="Город доставки" type="text">
-					
-					<button class="calculator__inner-btn btn" type="submit">Заказать расчёт</button>
-				</form>
 			</div>
 		</section>
-		<section>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus adipisci libero? Veritatis facilis ipsa doloremque vel, illum deserunt quidem iusto, culpa corporis ipsam deleniti dicta exercitationem repellat repellendus magnam maxime autem odit unde molestiae ratione sapiente nemo. Itaque tempora quos temporibus perspiciatis possimus. A laborum minus minima beatae magnam voluptas totam ipsum rem perspiciatis ratione eaque voluptate, inventore reprehenderit quod quos, cupiditate id possimus quasi quo. Sint hic quibusdam est reiciendis natus architecto quia nisi id, officiis labore? Nulla molestiae officia nam porro quod aliquid placeat nihil quaerat quibusdam velit tempora tempore sit a quas ipsa voluptatum at voluptates vel pariatur minima doloribus corrupti, eum repudiandae? Quia quasi, modi placeat sunt dignissimos illo. Dicta odio in recusandae corrupti ea, dolor reiciendis, vero voluptatibus dolores eaque minima placeat impedit, provident consectetur? Ipsa ipsam iste dolorum ullam dolorem nisi eveniet, temporibus nobis ratione quasi autem dicta nemo exercitationem labore ipsum. Obcaecati facilis nihil ex ipsum voluptates porro dolorem voluptatem voluptatum totam quod assumenda, dolor vel quisquam deserunt illo qui rerum sit libero commodi sequi aspernatur! Rem perspiciatis iure perferendis accusantium rerum repellendus voluptatum at ipsa, a deserunt quos molestiae repellat atque odit fuga mollitia consequuntur sit dolorum eum dolor. Et natus pariatur error adipisci magnam aliquam consequuntur, mollitia, ea voluptatem sint eligendi reprehenderit eaque cum reiciendis libero, perspiciatis quas suscipit optio. Vitae hic sint perspiciatis tenetur veritatis, repellendus, nesciunt nemo vel dolore facilis quibusdam? Odio, porro. Ratione non expedita quas voluptas vitae quae amet, nesciunt aperiam culpa velit numquam qui debitis eaque porro quo nam ea veritatis impedit voluptatibus officia maxime repellat sint. Omnis, velit quasi quos minus neque nemo et sequi asperiores delectus odio? Itaque explicabo ut veniam nisi laboriosam pariatur nam quae. Debitis eos deserunt inventore nobis aspernatur alias perspiciatis impedit officiis voluptas tenetur quibusdam eius, quaerat earum velit vero. Quisquam delectus voluptatibus molestias quam illo accusantium odit culpa. Repudiandae dolorem laudantium fugit quos temporibus maiores facere reiciendis quas sint adipisci asperiores quae iure, tempore at, dolor iusto officiis error nihil repellendus a. Voluptates explicabo nulla, et labore perferendis quas, sunt odio eum a numquam repudiandae? Porro mollitia iste, sint dolore provident esse id fugit ipsa recusandae, ducimus deleniti totam delectus architecto dicta. Animi, quos autem? Aut, praesentium suscipit reiciendis accusamus cupiditate distinctio harum molestias ea libero odit necessitatibus amet delectus mollitia inventore accusantium at nemo quisquam. Aliquid consectetur quisquam quo vero fugit veniam porro ad, at aspernatur laborum nesciunt in distinctio mollitia fugiat. Minus nisi suscipit veritatis nihil provident beatae sint quia quidem, consequatur est dolore explicabo dolores autem fugit, perspiciatis modi aperiam, aliquam accusantium? Vero tempora, debitis quam maxime nisi itaque neque harum delectus nesciunt sint vel, vitae impedit deserunt animi ratione eos perferendis sit illum! Impedit omnis deserunt incidunt dolorum, optio nulla odio quod sunt, amet harum ut, necessitatibus libero? Magnam labore veniam ab accusantium perspiciatis. Fugiat ab veritatis eum similique atque doloremque voluptatum a nostrum deleniti! Molestias beatae tempore deserunt maxime et amet eveniet enim quidem, quas, autem cupiditate eaque quod labore eum placeat quia quam ratione suscipit. Sit reprehenderit eum vero velit voluptatum quos vel excepturi nisi perferendis, necessitatibus nesciunt? Beatae sapiente corrupti animi nemo tempore provident officia, suscipit necessitatibus eius. Accusamus omnis odio enim mollitia blanditiis architecto ex! Officia at debitis molestias ullam! Hic quisquam labore, dolorem fugiat tenetur odit vero qui consectetur veritatis iste. Esse asperiores quia nisi. Accusamus, dignissimos autem officia odio at nulla alias placeat ut eveniet nam, repudiandae enim ratione accusantium earum expedita quia sequi ad dolorum? Quos magnam quisquam saepe amet dolores velit obcaecati aperiam dolorum dolorem, consectetur delectus pariatur quaerat accusantium eaque. Obcaecati sed doloremque ea, dolorum distinctio minima dolores soluta nisi voluptatibus fuga? Iure consequuntur assumenda fuga fugit iste unde corrupti soluta? Saepe aut inventore beatae, perspiciatis odio culpa cum ex molestias nulla amet! Accusantium maiores voluptate iste suscipit porro, saepe iusto magni impedit! Expedita, vitae ipsum autem magnam a unde veritatis explicabo corrupti perferendis nostrum impedit natus id enim perspiciatis, quae similique nobis consequuntur nisi consectetur libero nemo maiores illo! Error tempora voluptas modi nihil sequi earum incidunt hic voluptatem doloremque quaerat ad harum at adipisci veritatis quod possimus optio, quos blanditiis eum? Voluptate reiciendis fugit quam, odit incidunt repudiandae? Architecto, culpa fuga, eveniet veritatis repudiandae minus sit facilis eius ipsum possimus, delectus aperiam blanditiis molestias accusantium provident quia nulla. Quaerat, odio laborum odit soluta voluptate quos quo veritatis sequi, modi rerum molestiae quia id ipsa perspiciatis ipsam praesentium. Ab sit impedit quos suscipit omnis magni maiores dolor nulla magnam voluptas ipsum beatae minima excepturi non ipsa itaque voluptatum quasi, molestias exercitationem optio. Totam similique eaque quae eum, voluptatibus, iure mollitia ducimus quia illo cumque voluptatem voluptas animi obcaecati harum quibusdam, assumenda autem maxime dolorem aliquid temporibus repellat pariatur nemo! Repellat libero quo, quidem dolore nemo provident, ipsam quaerat dolores tempore, totam voluptatum harum distinctio voluptates. Laudantium vitae modi autem numquam aperiam quis nihil, perspiciatis minima qui laboriosam. Repellat ullam autem natus odio reprehenderit non, id iste unde aut. Id nisi commodi eaque suscipit mollitia maxime vel, voluptates a doloremque molestias quia explicabo, dolores, ducimus eius accusamus voluptas ab dolorem nulla porro veritatis voluptatibus aperiam fugiat magni! Et aspernatur, ullam dolores eum consequuntur nihil aliquid illum repudiandae laborum illo repellendus ipsam quasi recusandae tenetur repellat adipisci earum fugit dolorum? Animi, voluptatum. Modi maiores laboriosam quibusdam dolorem dignissimos architecto commodi eius rerum id iure, odio ad earum, iste animi nisi praesentium expedita, reprehenderit quae non accusantium tenetur harum soluta optio. Distinctio enim debitis atque, fugit ratione qui ut ex doloremque beatae nihil pariatur iure praesentium blanditiis quibusdam dignissimos mollitia earum obcaecati possimus repellat a. Quaerat reiciendis eos cupiditate, consequuntur corrupti et consequatur sunt voluptatem ex quis consectetur, sit asperiores adipisci! Dolorem dignissimos non commodi ipsam, consectetur nemo maxime amet. Delectus nam impedit soluta dolorum aspernatur porro sit, voluptas maxime veniam? Eius voluptates iste error. At expedita optio aperiam sint! Ab, consectetur nisi. Nisi ipsum id nihil, totam quidem ratione, architecto eligendi fugiat voluptatem adipisci dignissimos corporis harum eius animi eveniet temporibus ullam eaque dolore amet itaque voluptate quas! Accusantium enim eligendi vel voluptas qui mollitia modi sint aut dolorum obcaecati doloribus iusto optio cupiditate ab corrupti similique, non veritatis a, explicabo ratione placeat rem eos rerum? Tempora perspiciatis eligendi eveniet eum, sed reiciendis laboriosam animi iure dolores quia sapiente veniam quod odit exercitationem repellat dolore aspernatur libero sequi quas sit. Dignissimos deleniti neque dolorum ratione eius minus tempora sapiente libero, eos, quas distinctio? Ex, architecto magnam, accusantium, alias iste maxime ducimus nesciunt culpa dolorum dolor velit aliquid! Corrupti ipsam ipsum soluta eum fugit blanditiis aspernatur cumque, nihil, tempora voluptates reprehenderit ratione odit beatae? Praesentium dolorum quae inventore eveniet asperiores autem, tempora omnis quo reprehenderit suscipit fuga qui cumque nihil quas sunt incidunt distinctio, voluptatem delectus soluta. Reiciendis veniam ex vel ut cupiditate labore nostrum recusandae? Expedita et, quibusdam deserunt totam cupiditate dicta vitae vel? Facilis, perspiciatis sequi necessitatibus quia, commodi eaque et suscipit dicta omnis ipsum officia ut. Molestias odit quas quidem harum suscipit eligendi quasi dolore, est in amet blanditiis id tempore nobis doloremque nemo molestiae quo aliquam porro! Eos vitae nisi sunt, quam est nemo error accusantium quos itaque unde esse qui, totam architecto aliquam harum assumenda saepe perferendis soluta similique odit ullam fuga, quod temporibus laudantium. Aliquam repellat assumenda veritatis recusandae ea, rem nulla minima similique cum a facilis doloribus voluptas quo sunt illo. Quos deleniti delectus eos fugit, alias quae nesciunt voluptatum ad, accusantium culpa, rem doloribus tempora quidem sunt illum harum libero hic cumque nihil ex. Magnam ex obcaecati excepturi eum labore laudantium beatae distinctio sunt commodi! Dolores fuga alias fugit culpa cumque vero aut consectetur dolorum ducimus quibusdam itaque amet sequi nemo debitis inventore numquam, et repellendus repudiandae dolorem accusantium optio. Fugiat autem voluptas in quo ut commodi non inventore, doloremque consectetur molestias nostrum facere necessitatibus corporis deserunt nam voluptates repellat corrupti perspiciatis, quae odio culpa suscipit doloribus assumenda. Corporis omnis dicta quasi saepe quidem a, veritatis aliquam impedit illum! Dignissimos modi fugiat rem earum facilis animi sunt necessitatibus perspiciatis neque similique, doloribus nihil officia iusto dolor ex odit debitis consequatur impedit nostrum, enim quis cupiditate inventore vero! Nostrum eos mollitia animi quae, totam esse dolore quas doloribus ipsam cumque voluptatum possimus nulla quam alias officiis consequatur praesentium ex quisquam earum. Obcaecati alias reprehenderit quos et impedit voluptatem consectetur perferendis atque doloribus vel. Nesciunt, dicta id. Repellendus maiores, minus ipsa beatae quis doloribus tempora quibusdam minima qui nobis sequi molestiae expedita voluptatum obcaecati exercitationem reiciendis perspiciatis quas velit dolorum commodi delectus? Rerum vel dicta expedita aut animi maiores totam delectus possimus omnis recusandae laboriosam iusto quae atque cupiditate amet, eaque qui nobis perspiciatis laborum ab soluta nesciunt? Consectetur quo commodi libero quidem nemo labore nisi illo deserunt repudiandae voluptas, esse nobis minus quam nihil tempora provident officia hic earum ab quisquam voluptatem, adipisci animi? Est, nobis corporis. Atque deserunt magnam voluptatibus, enim velit quae voluptates suscipit, reprehenderit, laudantium repudiandae deleniti eos! Officia sed, fugit quo eius reiciendis hic cum in inventore aperiam asperiores illum! Sunt porro eveniet hic, dolor suscipit ut enim. Fugit labore explicabo, incidunt eligendi necessitatibus reiciendis quaerat natus ipsa ratione inventore officia nostrum facere blanditiis sed laudantium. Commodi nisi inventore est quia deserunt expedita, rem at ipsam veritatis aut recusandae consequatur autem. Tempore laudantium fugiat blanditiis quos architecto voluptatum ea minus ducimus eligendi quia, aperiam ut omnis, quam nostrum quis exercitationem pariatur reprehenderit molestiae, sit minima labore recusandae veritatis. Voluptatum iure perspiciatis ullam quis, magni cumque odio consequatur dolorem! Labore perferendis architecto incidunt dolorum voluptatibus. Asperiores, possimus. Earum voluptatem neque sunt animi, reprehenderit totam repellat eos dolores a quod, repellendus soluta quidem quisquam vitae tenetur excepturi, illo saepe magni alias perspiciatis ipsa. Nulla blanditiis delectus architecto voluptas nobis, consequuntur nemo doloribus iusto dolores quisquam odit minus, eius veniam sapiente voluptatibus pariatur ex libero est placeat at impedit ab! Labore, molestiae illum! Sunt et obcaecati minus molestiae mollitia ipsa explicabo iste dolore rerum tenetur quos corporis velit quis, earum itaque voluptatibus impedit reiciendis cumque fuga officia alias corrupti enim. Quia eius deserunt aliquam esse tenetur voluptates, ab sint expedita, veritatis autem suscipit facilis consequuntur eligendi, officiis quam ratione? Maxime, numquam. Nemo dolore atque voluptatum rem eius voluptas, placeat minus soluta dignissimos neque ipsa. Delectus placeat labore aperiam quibusdam atque numquam dignissimos distinctio debitis, laborum similique quo, ut vel tempora alias? Quas, animi, at est ab nulla vel deleniti voluptatum odit cum harum dignissimos repudiandae dolores excepturi molestiae itaque omnis. Aperiam laboriosam, porro aliquid commodi facere natus vitae dicta quam voluptatem illo suscipit odit quod sunt, nulla, quidem harum sequi numquam dolores! Suscipit architecto, expedita alias nemo, laboriosam sed, cupiditate ex quod ut corrupti fuga. Error consequuntur harum nesciunt ut aut voluptatum commodi voluptatibus obcaecati inventore qui ipsum voluptatem molestiae est, provident laborum blanditiis? Dolor iste illum architecto praesentium pariatur at, doloremque reprehenderit autem non sint officia, quidem quam soluta quos placeat itaque, voluptatibus numquam ab sit nam accusamus enim! Vitae cupiditate esse labore nostrum explicabo facere commodi mollitia voluptatem doloremque libero! Rem facere eos veritatis architecto aliquam rerum corporis quaerat iure. Doloribus, delectus placeat tenetur architecto, ducimus, dolores fugiat asperiores non nemo doloremque voluptates ipsum dolore. Voluptatibus enim adipisci atque, quia rem recusandae expedita! Rem inventore repellat rerum repellendus laboriosam culpa eaque tenetur suscipit vero, necessitatibus reprehenderit, nobis eum eveniet eos facere, nulla provident harum quod cupiditate unde recusandae est facilis quibusdam! Amet at repellat sit praesentium nostrum eaque impedit numquam fugit minus, harum, sint assumenda quis aspernatur magni. Id mollitia a maxime incidunt qui! Nihil libero, eveniet sunt, eum dolorum itaque distinctio quas sed optio vitae illo quam beatae nemo error culpa voluptatum repellendus soluta? Expedita in totam libero cumque est rerum harum ducimus alias facere, at eaque pariatur ipsa voluptatibus, cupiditate quaerat magni aperiam architecto molestias illo! Quaerat quasi sint nihil? Distinctio, assumenda cum molestias provident quidem minus suscipit nihil animi, eum harum, doloribus corrupti. Architecto officiis iste excepturi minus! Ipsum dignissimos nihil totam, placeat officia incidunt aut sequi modi eligendi, eius minus maiores fugit aperiam voluptates rerum beatae, culpa consequuntur vel et quis! Perferendis, nostrum.
+		<section class="advantages">
+			<h2 class="advantages__title">Наши преимущества</h2>
+			<ul class="advantages__list">
+				<li class="advantages__item">
+					<img src="./icon/advantages/1.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Растоможка груза</h3>
+						<div class="advantages__item-description">
+							Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза
+						</div>
+					</div>
+				</li>
+				<li class="advantages__item">
+					<img src="./icon/advantages/2.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Надёжная упаковка</h3>
+						<div class="advantages__item-description">
+							Все товары упаковываются нашими специалистами с особым вниманием к деталям, гарантируя, что они дойдут в безопасности и в отличном состоянии
+						</div>
+					</div>
+				</li>
+				<li class="advantages__item">
+					<img src="./icon/advantages/3.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Быстро и выгодно</h3>
+						<div class="advantages__item-description">
+							Мы предлагаем быструю и выгодную доставку, чтобы вы могли насладиться покупками как можно скорее.
+						</div>
+					</div>
+				</li>
+				<li class="advantages__item">
+					<img src="./icon/advantages/4.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Удобный сервис</h3>
+						<div class="advantages__item-description">
+							Стремимся сделать процесс доставки максимально удобным для вас, чтобы опыт остался приятным и беззаботным
+						</div>
+					</div>
+				</li>
+				<li class="advantages__item">
+					<img src="./icon/advantages/5.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Прозрачность работы</h3>
+						<div class="advantages__item-description">
+							Мы предоставляем полный контроль над каждым этапом доставки, от момента заказа до момента прибытия заказа
+						</div>
+					</div>
+				</li>
+				<li class="advantages__item">
+					<img src="./icon/advantages/6.svg" alt="Advantages" width="136" height="136" loading="lazy">
+					<div class="advantages__item-about">
+						<h3 class="advantages__item-title">Страхование груза</h3>
+						<div class="advantages__item-description">
+							Наше страхование обеспечивает полную защиту и покрытие почти все неприятные и неожиданные ситуации
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="warranty">
+			<div class="warranty__body">
+				<h2 class="warranty__title">
+					Гарантии качества
+				</h2>
+				<div class="warranty__description">
+					Наши гарантии качества включают в себя полный спектр документов, необходимых для ввоза и вывоза товаров, а также для успешного бизнеса на мировом рынке. <br>
+					Мы предоставляем вам надёжность и уверенность
+				</div>
+			</div>
+			<ul class="warranty__list">
+				<li class="warranty__item">
+					<a href="./img/warranty/1.png" class="warranty__link" data-fancybox="gallery">
+						<img src="./img/warranty/1.png" alt="Certificate of registration" class="warranty__img" width="366" height="375" loading="lazy">
+					</a>
+					<h3 class="warranty__about">Свидетельство о регистрации в РФ</h3>
+				</li>
+				<li class="warranty__item">
+					<a href="./img/warranty/2.png" class="warranty__link" data-fancybox="gallery">
+						<img src="./img/warranty/2.png" alt="Certificate of registration" class="warranty__img" width="366" height="375" loading="lazy">
+					</a>
+					<h3 class="warranty__about">Свидетельство о регистрации в США</h3>
+				</li>
+				<li class="warranty__item">
+					<a href="./img/warranty/3.png" class="warranty__link" data-fancybox="gallery">
+						<img src="./img/warranty/3.png" alt="Certificate of registration" class="warranty__img" width="366" height="375" loading="lazy">
+					</a>
+					<h3 class="warranty__about">Свидетельство о регистрации в Китае</h3>
+				</li>
+				<li class="warranty__item">
+					<a href="./img/warranty/4.png" class="warranty__link" data-fancybox="gallery">
+						<img src="./img/warranty/4.png" alt="Certificate of registration" class="warranty__img" width="366" height="375" loading="lazy">
+					</a>
+					<h3 class="warranty__about">Свидетельство о регистрации в Великобритнии</h3>
+				</li>
+			</ul>
+			<button type="button" class="warranty__btn btn">Показать больше документов</button>
+		</section>
+		<section class="reviews">
+			<h2 class="reviews__title">Отзывы</h2>
+			<div class="reviews__body">
+				<div class="reviews__prev">
+					<img src="./icon/reviews/Arrow.svg" alt="prev" width="60" height="60" loading="lazy">
+				</div>
+				<div class="reviews__wrapper">
+					<ul class="reviews__list">
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Я заказала последний iPhone из США через ваш сервис, и доставка прошла быстро и без каких‑либо проблем. Гарантии качества и надёжная упаковка сделали мой опыт покупки невероятно позитивным
+							</div>
+							<div class="reviews__who">Анна</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надёжную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию
+							</div>
+							<div class="reviews__who">Алексей</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надежную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию
+							</div>
+							<div class="reviews__who">Ольга</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Заказал шикарные часы из Швейцарии, и доставка была невероятно быстрой. Ваш сервис делает интернет-шоппинг более доступным и удобным
+							</div>
+							<div class="reviews__who">Игорь</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Ваш сервис действительно изменил мой способ покупок. Я больше не переживаю о таможенных вопросах и документах - все у вас в порядке. Спасибо за ваше качество и надежность
+							</div>
+							<div class="reviews__who">Екатерина</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание
+							</div>
+							<div class="reviews__who">Дмитрий</div>
+						</li>
+						<li class="reviews__item">
+							<div class="reviews__description">
+								Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание
+							</div>
+							<div class="reviews__who">Дмитрий</div>
+						</li>
+					</ul>
+				</div>
+				<div class="reviews__next">
+					<img class="reviews__img" src="./icon/reviews/Arrow.svg" alt="prev" width="60" height="60" loading="lazy">
+				</div>
+			</div>
+		</section>
+		<section class="questions">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magnam hic laudantium ipsa illum? Laborum ratione eaque autem dicta atque nisi voluptatum libero aliquam eum, quas ipsa consequatur maiores nostrum.
 		</section>
 	</main>
+
 	<script src="./script/burger.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+	<script src="./script/slider.js"></script>
 </body>
 </html>

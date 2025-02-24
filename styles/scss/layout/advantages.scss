@@ -1,0 +1,33 @@
+@use "../base/index.scss" as *;
+
+.advantages {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: var(--indent);
+	margin-bottom: 72px;
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		gap: var(--indent);
+	}
+	&__item {
+		margin: var(--indent);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 12px;
+	}
+	&__item-title {
+		font-weight: 900;
+		font-size: 24px;
+		line-height: 1.41;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+	&__item-description {
+		font-size: 14px;
+		line-height: 1.42;
+	}
+}

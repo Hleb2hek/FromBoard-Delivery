@@ -1,6 +1,57 @@
 @use "../base/index.scss" as *;
 
-@media (max-width: 1210px) {
+@media (max-width: 1536px) {
+	.calculator {
+		display: grid;
+		grid-template-columns: repeat(10,1fr);
+		&__body {
+			display: grid;
+			grid-column: 10 span;
+			grid-template-columns: repeat(10,1fr);
+		}
+		&__wrapper {
+			grid-column: 5 span;
+		}
+		&__title {
+			font-size: 30px;
+			line-height: 1.2;
+		}
+		&__description {
+			font-size: 20px;
+			line-height: 1.4;
+		}
+		&__img {
+			grid-column: 6/5 span;
+		}
+		&__inner {
+			grid-column: 10 span;
+			&-wrapper {
+				grid-column: 8 span;
+			}
+		}
+	}
+	.advantages {
+		&__list {
+			grid-template-columns: repeat(2,1fr);
+		}
+	}
+	.warranty {
+		&__list {
+			grid-template-columns: repeat(10,1fr);
+		}
+		&__item {
+			grid-column: 5 span;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			row-gap: 4px;
+		}
+	}
+}
+
+@media (max-width: 1287px) {
+
 	.header {
 		&__price {
 			display: none;
@@ -26,15 +77,39 @@
 			display: flex;
 		}
 	}
+	.calculator {
+		grid-template-columns: repeat(8,1fr);
+		&__body {
+			grid-column: 8 span;
+			display: flex;
+			flex-direction: column;
+		}
+		&__wrapper {
+			grid-column: 5 span;
+		}
+		&__title {
+			font-size: 30px;
+			line-height: 1.2;
+		}
+		&__description {
+			font-size: 20px;
+			line-height: 1.4;
+		}
+		&__inner {
+			grid-column: 8 span;
+		}
+	}
+	.advantages {
+		&__item {
+			margin: 0;
+		}
+	}
 }
 
 @media (max-width: 880px) {
 
 	// класс .active выступает в роли visually-hidden, но только
 	// при нажатии на бургер он возвращает блоки со своим классом
-	.container {
-		--container-padding-x: 62px;
-	}
 	.header {
 		&__container {
 			border-bottom-left-radius: 16px;
@@ -71,6 +146,42 @@
 		}
 		& .burger {
 			display: block;
+		}
+	}
+	.calculator {
+		&__inner-form {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.advantages {
+		&__list {
+			display: flex;
+			flex-direction: column;
+		}
+		&__item {
+			margin: 0;
+		}
+		&__item-title {
+			font-weight: 900;
+			font-size: 20px;
+			line-height: 1.4;
+		}
+	}
+	.warranty {
+		&__list {
+			grid-template-columns: repeat(8,1fr);
+		}
+		&__item {
+			grid-column: 8 span;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			row-gap: 4px;
+			&:not(:last-child) {
+				margin-bottom:var(--indent);
+			}
 		}
 	}
 }

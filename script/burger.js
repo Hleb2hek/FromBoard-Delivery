@@ -27,6 +27,8 @@ function handleResize() {
 	}
 }
 
+
+
 // Вызываем функцию при загрузке страницы и при изменении размера окна
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', handleResize);

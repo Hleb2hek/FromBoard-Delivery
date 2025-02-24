@@ -6,8 +6,17 @@
 	padding: 12px;
 	border: 2px solid var(--color-gray-900);
 	border-radius: 4px;
-
-	&::placeholder {
-		color: var(--color-gray-400);
+	transition: border-color var(--transition-duration) , outline var(--transition-duration), color var(--transition-duration) ;
+	&:hover {
+		border-color: var(--color-purple-500);
+		&::placeholder {
+			color: var(--color-purple-500);
+		}
+	}
+	&:focus {
+		outline:var(--color-purple-500) ;
+		&::placeholder {
+			color: var(--color-gray-900);
+		}
 	}
 }

@@ -1,23 +1,28 @@
 @use "../base/index.scss" as *;
 
 .calculator {
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	margin-top: 72px;
-	margin-bottom: 72px;
-	column-gap: var(--indent);
-	height: calc(100vh - 192px);
 
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	gap:var(--indent);
+	margin: 72px 0;
+	
 	// calculator__body и его вытекающие
 	&__body {
-		max-height: 584px;
+		display: grid;
+		gap: var(--indent);
+		grid-column: 6 span;
+		grid-template-columns: repeat(6,1fr);
+	}
+	&__wrapper {
+		grid-column: 6 span;
 	}
 	&__title {
 		text-align: left;
 		font-size: 36px;
 		line-height: 1.1;
 		font-weight: 900;
-
+		
 		&:not(:last-child) {
 			margin-bottom: 12px;
 		}
@@ -28,44 +33,49 @@
 		}
 	}
 	&__img {
-		border-radius: var(--border-radius);;
+		grid-column: 1/7 ;
+		border-radius: var(--border-radius);
 	}
-
+	
 	// calculator__inner и его вытекающие
 	&__inner {
-		display: grid;
-		grid-template-columns: repeat(6,1fr);
-		max-height: 584px;
-		padding: var(--indent) 0;
-		background-color: var(--color-gray-50);
-		border-radius: var(--border-radius);
-
-		&__about {
-			grid-column: 2/4 span;
-
+		grid-column: 7/6 span;
+		background: var(--color-gray-50);
+		border-radius: var(--border-radius) ;
+		&-wrapper {
+			display: grid;
+			grid-template-columns: repeat(6,1fr);
+			margin: var(--indent) 0;
+			gap:var(--indent);
+		}
+		&-about {
+			grid-column: 2 / 4 span;
 		}
 		&-title {
-			font-weight: 700;
 			font-size: 30px;
 			line-height: 1.2;
+			font-weight: 700;
 			text-align: center;
 			&:not(:last-child) {
-				margin-bottom: 16px;
+				margin-bottom: 16px ;
 			}
 		}
 		&-description {
+			text-align: center;
 			font-size: 16px;
 			line-height: 1.5;
-			text-align: center;
 		}
-
 		&-form {
+			grid-column: 2 / 4 span;
 			display: grid;
 			grid-template-columns: repeat(2,1fr);
-			grid-column: 2/4 span;
-			gap:var(--indent);
-
-			
+			gap: var(--indent);
+			& #username {
+				grid-column: 1 / 2 span ;
+			}
+		}
+		.btn {
+			grid-column: 1 / 2 span ;
 		}
 	}
 }
