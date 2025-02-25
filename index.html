@@ -18,6 +18,9 @@
 
 	<!-- Библиотека fancybox для реализации просмотра Свидетельств о регистрации -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 <body>
 	<header class="header">
@@ -232,61 +235,40 @@
 		</section>
 		<section class="reviews">
 			<h2 class="reviews__title">Отзывы</h2>
-			<div class="reviews__body">
-				<div class="reviews__prev">
-					<img src="./icon/reviews/Arrow.svg" alt="prev" width="60" height="60" loading="lazy">
+			<div class="reviews__container">
+				<div class="swiper__prev">
+					<img class="swiper__img" src="./icon/reviews/Arrow.svg" alt="prev" width="60" height="60" loading="lazy">
 				</div>
-				<div class="reviews__wrapper">
-					<ul class="reviews__list">
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Я заказала последний iPhone из США через ваш сервис, и доставка прошла быстро и без каких‑либо проблем. Гарантии качества и надёжная упаковка сделали мой опыт покупки невероятно позитивным
+				<div class="swiper">
+			
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="swiper__description">
+								Я заказала последний iPhone из США через ваш сервис, и доставка прошла быстро и без каких‑либо проблем.
 							</div>
-							<div class="reviews__who">Анна</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надёжную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию
+							<div class="swiper__who">Анна</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="swiper__description">
+								Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил.
 							</div>
-							<div class="reviews__who">Алексей</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надежную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию
+							<div class="swiper__who">Алексей</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="swiper__description">
+								Заказал шикарные часы из Швейцарии, и доставка была невероятно быстрой.
 							</div>
-							<div class="reviews__who">Ольга</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Заказал шикарные часы из Швейцарии, и доставка была невероятно быстрой. Ваш сервис делает интернет-шоппинг более доступным и удобным
-							</div>
-							<div class="reviews__who">Игорь</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Ваш сервис действительно изменил мой способ покупок. Я больше не переживаю о таможенных вопросах и документах - все у вас в порядке. Спасибо за ваше качество и надежность
-							</div>
-							<div class="reviews__who">Екатерина</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание
-							</div>
-							<div class="reviews__who">Дмитрий</div>
-						</li>
-						<li class="reviews__item">
-							<div class="reviews__description">
-								Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание
-							</div>
-							<div class="reviews__who">Дмитрий</div>
-						</li>
-					</ul>
+							<div class="swiper__who">Игорь</div>
+						</div>
+					</div>
 				</div>
-				<div class="reviews__next">
-					<img class="reviews__img" src="./icon/reviews/Arrow.svg" alt="prev" width="60" height="60" loading="lazy">
+				<div class="swiper__next">
+					<img class="swiper__img" src="./icon/reviews/Arrow.svg" alt="next" width="60" height="60" loading="lazy">
 				</div>
 			</div>
+			
 		</section>
+
 		<section class="questions">
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magnam hic laudantium ipsa illum? Laborum ratione eaque autem dicta atque nisi voluptatum libero aliquam eum, quas ipsa consequatur maiores nostrum.
 		</section>
@@ -296,5 +278,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
 	<script src="./script/slider.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>
