@@ -54,19 +54,19 @@
 			<nav class="header__navigation">
 				<ul class="header__list">
 					<li class="header__item">
-						<a href="#!" class="header__link">Калькулятор</a>
+						<a href="#calculator" id="link-1" class="header__link">Калькулятор</a>
 					</li>
 					<li class="header__item">
-						<a href="#!" class="header__link">О нас</a>
+						<a href="#advantages" id="link-2" class="header__link">О нас</a>
 					</li>
 					<li class="header__item">
-						<a href="#!" class="header__link">Гарантии</a>
+						<a href="#warranty" id="link-3" class="header__link">Гарантии</a>
 					</li>
 					<li class="header__item">
-						<a href="#!" class="header__link">Отзывы</a>
+						<a href="#reviews" id="link-4" class="header__link">Отзывы</a>
 					</li>
 				</ul>
-				<button class="header__btn btn" type="button">Оставить заявку</button>
+				<button class="header__btn btn" type="submit">Оставить заявку</button>
 			</nav>
 			<div class="header__price-down">
 				<div>Доставляем товары из заграницы в Россию</div>
@@ -77,7 +77,7 @@
 	</header>
 	<main class="main container">
 		<h1 class="visually-hidden">FromBoard Delivery</h1>
-		<section class="calculator">
+		<section id="calculator" class="calculator">
 			<h2 class="visually-hidden">calculator</h2>
 			<div class="calculator__body">
 				<div class="calculator__wrapper">
@@ -133,7 +133,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="advantages">
+		<section id="advantages" class="advantages">
 			<h2 class="advantages__title">Наши преимущества</h2>
 			<ul class="advantages__list">
 				<li class="advantages__item">
@@ -192,7 +192,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="warranty">
+		<section id="warranty" class="warranty">
 			<div class="warranty__body">
 				<h2 class="warranty__title">
 					Гарантии качества
@@ -230,7 +230,7 @@
 			</ul>
 			<button type="button" class="warranty__btn btn">Показать больше документов</button>
 		</section>
-		<section class="reviews">
+		<section id="reviews" class="reviews">
 			<h2 class="reviews__title">Отзывы</h2>
 			<div class="reviews__swiper swiper">
 				<div class="reviews__container">
@@ -307,7 +307,7 @@
 			
 
 		</section>
-		<section class="questions">
+		<section id="questions" class="questions">
 			<div class="questions__body">
 				<h2 class="questions__title">
 					Остались вопросы?
@@ -351,16 +351,16 @@
 				<div class="footer__navigation">
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="#!" class="footer__link">Калькулятор</a>
+							<a href="#calculator" id="link-1" class="footer__link">Калькулятор</a>
 						</li>
 						<li class="footer__item">
-							<a href="#!" class="footer__link">О нас</a>
+							<a href="#advantages" id="link-2" class="footer__link">О нас</a>
 						</li>
 						<li class="footer__item">
-							<a href="#!" class="footer__link">Гарантии</a>
+							<a href="#warranty" id="link-3" class="footer__link">Гарантии</a>
 						</li>
 						<li class="footer__item">
-							<a href="#!" class="footer__link">Отзывы</a>
+							<a href="#reviews" id="link-4" class="footer__link">Отзывы</a>
 						</li>
 					</ul>
 				</div>
@@ -377,7 +377,7 @@
 					офертой, которая определена в ст. 437 ГК РФ. Вся информация на сайте может содержать неточности, орфографические и иные ошибки, она не является полной, окончательно и исчерпывающей
 				</div>
 				<div class="footer__author-source">
-					Ссылка на разраба макета <br>
+					Ссылка на разраба макета <br>	
 					но её нет
 				</div>
 			</div>
@@ -390,6 +390,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="./script/slider.js"></script>
 
+	<!-- Криво реализован, чисто посмотреть как работает  -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<script src="/script/targetNav.js"></script>
 
 </body>
 </html>

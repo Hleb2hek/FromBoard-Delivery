@@ -821,6 +821,11 @@ a:active {
   color: var(--color-purple-700);
 }
 
+.focus {
+  color: var(--color-purple-500);
+  border-bottom: 3px dashed var(--color-purple-500);
+}
+
 @media (max-width: 1536px) {
   .calculator {
     display: grid;
@@ -1092,6 +1097,14 @@ a:active {
   .questions__form {
     display: flex;
     flex-direction: column;
+  }
+  .questions__title {
+    text-align: center;
+  }
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
   }
 }
 
