@@ -269,6 +269,9 @@
 				align-items: center;
 			}
 		}
+		&__contact {
+			text-align: center;
+		}
 		&__author {
 			max-width: 502px;
 		}
@@ -303,14 +306,31 @@
 			display: flex;
 			}
 		}
+	.advantages {
+		&__title {
+			text-align: center;
+		}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			&-title {
+				text-align: center;
+			}
+		}
+	}
 	.reviews {
-
+		&__container {
+			margin-inline: 0;
+		}
 		&__wrapper &__slide {
 			min-height: 300px;
 			font-size: 16px;
 			&::after {
 				all: unset;
 			}
+		}
+		.swiper-button-prev,.swiper-button-next {
+			display: none;
 		}
 	}
 	.questions {

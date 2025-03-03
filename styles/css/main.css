@@ -250,6 +250,7 @@ svg * {
 */
 html {
   scrollbar-gutter: auto;
+  scroll-padding-top: 200px;
 }
 
 body {
@@ -810,6 +811,10 @@ a, button, input, textarea, svg *, span, img {
 .input:focus::placeholder {
   color: var(--color-gray-900);
 }
+.input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 a {
   color: var(--color-gray-900);
@@ -1059,6 +1064,9 @@ a:active {
     display: flex;
     align-items: center;
   }
+  .footer__contact {
+    text-align: center;
+  }
   .footer__author {
     max-width: 502px;
   }
@@ -1087,12 +1095,28 @@ a:active {
   .header__burger {
     display: flex;
   }
+  .advantages__title {
+    text-align: center;
+  }
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .advantages__item-title {
+    text-align: center;
+  }
+  .reviews__container {
+    margin-inline: 0;
+  }
   .reviews__wrapper .reviews__slide {
     min-height: 300px;
     font-size: 16px;
   }
   .reviews__wrapper .reviews__slide::after {
     all: unset;
+  }
+  .reviews .swiper-button-prev, .reviews .swiper-button-next {
+    display: none;
   }
   .questions__form {
     display: flex;

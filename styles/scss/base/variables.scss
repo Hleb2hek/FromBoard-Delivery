@@ -29,9 +29,10 @@
 /*
 Добавлен чтобы просто убрать вертикальную
 полосу, хз как по другому фиксить
-*/
+*/	
 html {
 	scrollbar-gutter: auto;
+	scroll-padding-top: 200px;
 }
 
 body {
